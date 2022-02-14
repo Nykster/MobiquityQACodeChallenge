@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.baseURI;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,7 +15,7 @@ public class SearchStepsUser {
 		this.stepData = stepData;
 	}
 	
-	String baseURI = "https://jsonplaceholder.typicode.com/";
+//	String baseURI = "https://jsonplaceholder.typicode.com/";
 //	private Response response;
 //	private ValidatableResponse json;
 //	private RequestSpecification request;
@@ -23,12 +24,13 @@ public class SearchStepsUser {
 	
 	@Given("a user exists with username {string}")
 	public void a_user_exists_with_username(String user) {
+//		baseURI = "https://jsonplaceholder.typicode.com";
 		stepData.request = given().params("username", user);
 	}
 
 	@When("an end user retrieves the user by username")
 	public void an_end_user_retrieves_the_user_by_username() {
-		stepData.response = stepData.request.when().get(baseURI+"users");
+		stepData.response = stepData.request.when().get(stepData.baseURI+"users");
 //		System.out.println("response: " + response.prettyPrint());
 	}
 

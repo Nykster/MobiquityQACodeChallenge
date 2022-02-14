@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {"src/test/resources/features/SearchPosts.feature"},
 		glue = {"stepDefinitions"},
-		plugin = {"pretty", 
+		plugin = {"pretty",
 //				  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 //				  "timeline:test-output-thread/",
 //				  "json:target/cucumber.json"				  
