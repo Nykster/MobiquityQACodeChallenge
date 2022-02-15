@@ -7,28 +7,28 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class SearchStepsPosts {
+public class SearchPostsSteps {
 
-	private StepData stepData;
+	private CommonData commonData;
 
-	public SearchStepsPosts(StepData stepData) {
-		this.stepData = stepData;
+	public SearchPostsSteps(CommonData commonData) {
+		this.commonData = commonData;
 	}
 
 	@Given("an end user searches for posts by username {string}")
 	public void an_end_user_searches_for_posts_by_username(String string) {
-		stepData.request = given().queryParam("userId", "9");
+		commonData.request = given().queryParam("userId", "9");
 	}
 
 	@When("an end user retrieves the posts by {string}")
 	public void an_end_user_retrieves_the_posts_by(String string) {
-		stepData.response = stepData.request.when().get(stepData.baseURI + "posts");
-//		System.out.println("response: " + stepData.response.prettyPrint());
+		commonData.response = commonData.request.when().get(commonData.baseURI + "posts");
+//		System.out.println("response: " + commonData.response.prettyPrint());
 	}
 
 	/*
 	 * @Then("the posts are successfully returned status code {int}") public void
 	 * the_posts_are_successfully_returned_status_code(Integer statusCode) {
-	 * stepData.json = stepData.response.then().statusCode(statusCode); }
+	 * commonData.json = commonData.response.then().statusCode(statusCode); }
 	 */
 }

@@ -8,12 +8,13 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 //@RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		features = {"src/test/resources/features/FetchComments.feature"},
+		features = {"src/test/resources/features/SearchUser.feature"},
 		glue = {"stepDefinitions"},
 		plugin = {"pretty",
 //				  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 //				  "timeline:test-output-thread/",
-//				  "json:target/cucumber.json"				  
+				  "html:target/cucumber-report",
+				  "json:target/cucumber.json"				  
 //		monochrome = {true},
 				}
 		)
