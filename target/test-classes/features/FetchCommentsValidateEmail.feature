@@ -1,7 +1,7 @@
 Feature: Fetch comments and validate email address
 
 Background:
-Given a user exists with postId "9"
+Given a user exists with "postId" "9"
 When an end user retrieves the comment by postId
 And the status code is 200
 

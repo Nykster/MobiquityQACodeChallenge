@@ -48,4 +48,4 @@ Scenario: End user makes call to web service to retrieve user by street address
 Scenario: End user makes call to web service to retrieve user by non existent username
 	Given a user with "username" "Anyik" exists
 	When an end user searches for the user
-	Then the status code is 200
+	Then an empty list is returned

@@ -19,9 +19,9 @@ public class FetchCommentsAndEmailValidationSteps {
 		this.commonData = commonData;
 	}
 
-	@Given("a user exists with postId {string}")
-	public void a_user_exists_with_post_id(String string) {
-		commonData.request = given().queryParam("postId", "9");
+	@Given("a user exists with {string} {string}")
+	public void a_user_exists_with(String key, String value) {
+		commonData.request = given().queryParam(key, value);
 	}
 	
 	@When("an end user retrieves the comment by postId")
