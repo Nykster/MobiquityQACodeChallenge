@@ -31,7 +31,6 @@ public class FetchCommentsAndEmailValidationSteps {
 	
 	@Then("an end user validates the email address {string} is correct")
 	public void an_end_user_validates_the_address_is_correct(String emailadd) {
-//		commonData.response.then().assertThat().body("email", hasItem("emailadd"));
 		commonData.response.then().assertThat().body("email", hasItem(emailadd));
 	}
 

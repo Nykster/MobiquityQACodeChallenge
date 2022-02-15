@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue = {"stepDefinitions"},
 		plugin = {"pretty",
 //				  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-//				  "timeline:test-output-thread/",
+				  "timeline:test-output-thread/",
 				  "html:target/cucumber-report",
 				  "json:target/cucumber.json"				  
 //		monochrome = {true},

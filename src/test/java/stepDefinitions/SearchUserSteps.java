@@ -28,7 +28,7 @@ public class SearchUserSteps {
 
 	@Then("the status code is {int}")
 	public void the_status_code_is(int statusCode) {
-		commonData.json = commonData.response.then().statusCode(statusCode).log().body();
+		commonData.json = commonData.response.then().statusCode(statusCode).log().all();
 		System.out.println("*****************RESPONSE CODE*****************:" + commonData.response.statusCode());
 	}
 
