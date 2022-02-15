@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 //@RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		features = {"src/test/resources/features/SearchPosts.feature"},
+		features = {"src/test/resources/features/ValidateEmail.feature"},
 		glue = {"stepDefinitions"},
 		plugin = {"pretty",
 //				  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
