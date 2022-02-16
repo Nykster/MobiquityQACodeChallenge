@@ -24,9 +24,9 @@ In order to implement the assignment, the following flows were tested:
 
 ## How to execute
 
-In order to run the tests, these things are needed:
-1. Java 11 or greater
-2. Maven (tested with the latest version)
+Requirements to run test:
+1. Java 8
+2. Maven
 
 4. to run the tests pointing to a local server run the command `mvn clean verify`
 5. to run the tests pointing to the official [server deployment](https://jsonplaceholder.typicode.com/) run the command `mvn clean verify -Denvironment=production`
@@ -39,4 +39,11 @@ Any commit made to `master` branch will run the tests against the [production de
 
 ## Test Reports
 
-Test results are deployed to GitHub Pages: [Test Reports](https://ricardorlg.github.io/mobiquity-qa-assignment/index.html)
+Test results are deployed to Collection: [Test Reports](https://reports.cucumber.io/report-collections/a7f2e211-29d4-48cf-8951-2450aeb76b15)
+
+To add new reports add following environmental variable to chosen IDE (Eclipse for this project):
+
+Run->Run Configuration->click Environment tab then add following and apply:
+CUCUMBER_PUBLISH_TOKEN: 057f9549-243f-474f-ac90-2c272f3e09cf
+
+Reports will now be available in above collection
