@@ -27,6 +27,7 @@ In order to implement the assignment, the following flows were tested:
 Requirements to run test:
 1. Java 8
 2. Maven
+3. Cucumber6
 
 4. to run the tests pointing to a local server run the command `mvn clean verify`
 5. to run the tests pointing to the official [server deployment](https://jsonplaceholder.typicode.com/) run the command `mvn clean verify -Denvironment=production`
@@ -44,6 +45,7 @@ Test results are deployed to Collection: [Test Reports](https://reports.cucumber
 To add new reports add following environmental variable to chosen IDE (Eclipse for this project):
 
 Run->Run Configuration->click Environment tab then add following and apply:
+
 CUCUMBER_PUBLISH_TOKEN: 057f9549-243f-474f-ac90-2c272f3e09cf
 
 Reports will now be available in above collection
