@@ -13,7 +13,7 @@
 		<java.version>1.8</java.version>
 		<junit.version>4.13.2</junit.version>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>io.rest-assured</groupId>
@@ -83,7 +83,7 @@
 	</dependencies>
 
 
-  	<build>
+	<build>
 		<plugins>
 
 
@@ -102,14 +102,49 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.version}</version>
-
-				<!--  <configuration>
-
+				<configuration>
 					<includes>
-						<include>**/*MyTestRunner.java</include>
+						<include>
+							**/MySerenityTestRunner.java
+						</include>
 					</includes>
+					<parallel>methods</parallel>
+					<threadCount>4</threadCount>
+					<useUnlimitedThreads>false</useUnlimitedThreads>
+				</configuration>
+				<!-- <configuration> <includes> <include>**/*MyTestRunner.java</include> 
+					</includes> </configuration> -->
+			</plugin>
 
-				</configuration> -->
+			<plugin>
+				<groupId>net.serenity-bdd.maven.plugins</groupId>
+				<artifactId>serenity-maven-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<tags>
+						${tags}
+					</tags>
+					<dependencies>
+						<dependency>
+							<groupId>net.serenity-bdd</groupId>
+							<artifactId>serenity-core</artifactId>
+							<version>3.2.0</version>
+						</dependency>
+					</dependencies>
+					<executions>
+						<execution>
+							<id>
+								serenity-reports
+							</id>
+							<phase>
+								post-integration-test
+							</phase>
+							<goals>
+								aggregate
+							</goals>
+						</execution>
+					</executions>
+				</configuration>
 			</plugin>
 
 			<plugin>
@@ -122,20 +157,19 @@
 							<goal>integration-test</goal>
 						</goals>
 						<configuration>
-								
+
 							<includes>
-								<!--UNCOMMENT BELOW LINE
-								- To execute feature files with a single runner-->
-								<include>**/MyTestRunner.java</include>				
+								<!--UNCOMMENT BELOW LINE - To execute feature files with a single 
+									runner -->
+								<include>**/MyTestRunner.java</include>
 							</includes>
-							<!--UNCOMMENT BELOW 3 LINES - To execute using parallel or
-							combination
-							option-->
+							<!--UNCOMMENT BELOW 3 LINES - To execute using parallel or combination 
+								option -->
 							<parallel>methods</parallel>
 							<threadCount>1</threadCount>
 							<perCoreThreadCount>false</perCoreThreadCount>
-							<!--UNCOMMENT BELOW 3 LINES - To execute using forking or combination
-							option-->
+							<!--UNCOMMENT BELOW 3 LINES - To execute using forking or combination 
+								option -->
 
 						</configuration>
 					</execution>
@@ -144,7 +178,7 @@
 
 		</plugins>
 	</build>
-  	
-  	
+
+
 
 </project>
