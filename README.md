@@ -11,8 +11,7 @@ Tools utilised:
   * Screenplay implementation
   * Cucumber integration
   * Test Reporting
-* Cucumber were used as test specification tool (the latest version were used that includes support to Rule keyword in Gherkin)
-* Maven
+* Cucumber tool used for Behaviour Driven Development
 * Hamcrest for assertions
 * GitHub Actions as CI
 
