@@ -1,4 +1,3 @@
-[![Production test execution flow](https://github.com/ricardorlg/mobiquity-qa-assignment/actions/workflows/production_flow.yml/badge.svg)](https://github.com/ricardorlg/mobiquity-qa-assignment/actions/workflows/production_flow.yml)
 # ANYIK DUKU MOBIQUITY QA CODE CHALLENGE
 
 The following repository comprises the code for the Mobiquity Code Challenge.
@@ -18,21 +17,21 @@ Tools:
 The following tests were covered:
 1. Search for user with username "Delphine": This scenario covered searching for the user using different parameters (e.g. id, name, company name); also included are negative tests cases for non-existent data (empty list returned).
 2. Search for posts: This test case covers retrieving posts a user has made using values such as userId, title posts and id. Including is negative testing for non-existent userId, title and id.
-3. Comments search: This cover the main test flow asked in the challenge, scenarios that covers searching comments using simple and complex queries (like comments made to all the posts of a user) were added, all the verifications checks valid emails. This test case tests the retrieval of comments by a user and validation that an email address exists and is in the proper format. Also included are cases with incorrectly formatted and non-existent emails.
+3. Comments search: TThis test case tests the retrieval of comments by a user and validation that an email address exists and is in the proper format. Also included are cases with incorrectly formatted and non-existent emails.
 
 ## How to execute
 
 Requirements to run test:
 1. Java 8
-2. Maven
-4. to run the tests pointing to a local server run the command `mvn clean verify`
-5. to run the tests pointing to the official [server deployment](https://jsonplaceholder.typicode.com/) run the command `mvn clean verify -Denvironment=production`
-6. After test execution a SerenityBDD report will be generated located at `target/site/serenity`
+2. Maven 3.8
+3. To run tests pointing to https://jsonplaceholder.typicode.com/:
+(i) Terminal: execute command `mvn clean verify` (after navigating to project on terminal).
+(ii) Eclipse IDE: run MyTestRunner.java as a JUnit test.
 
 ## CI
 
-For this project GitHub actions were used as CI, by default any commit made to the `development` branch will run the test pointing to a local server (deployed in the CI environment using Docker).
-Any commit made to `master` branch will run the tests against the [production deployment](https://jsonplaceholder.typicode.com/).
+When a commit occurs, code is pushed to master branch and subsequently tests are run against CircleCI.
+
 
 ## Test Reports
 
