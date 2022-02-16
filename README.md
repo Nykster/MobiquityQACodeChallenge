@@ -1,5 +1,5 @@
 [![Production test execution flow](https://github.com/ricardorlg/mobiquity-qa-assignment/actions/workflows/production_flow.yml/badge.svg)](https://github.com/ricardorlg/mobiquity-qa-assignment/actions/workflows/production_flow.yml)
-# MOBIQUITY QA CODE CHALLENGE
+# ANYIK DUKU MOBIQUITY QA CODE CHALLENGE
 
 The following repository comprises the code for the Mobiquity Code Challenge.
 
@@ -13,12 +13,12 @@ Tools:
 * Hamcrest framework for customized assertion matchers
 * RESTAssured library for writing simple yet powerful tests
 
-## Test Cases
+## Test Cases Covered
 
 The following tests were covered:
-1. Users search: Test scenarios that covers Searching users by different queries were added
-2. Posts search: Test that verify searching posts using different queries like, userId, title or postId were implemented
-3. Comments search: This cover the main test flow asked in the challenge, scenarios that covers searching comments using simple and complex queries (like comments made to all the posts of a user) were added, all the verifications checks valid emails.
+1. Search for user with username "Delphine": This scenario covered searching for the user using different parameters (e.g. id, name, company name); also included are negative tests cases for non-existent data (empty list returned).
+2. Search for posts: This test case covers retrieving posts a user has made using values such as userId, title posts and id. Including is negative testing for non-existent userId, title and id.
+3. Comments search: This cover the main test flow asked in the challenge, scenarios that covers searching comments using simple and complex queries (like comments made to all the posts of a user) were added, all the verifications checks valid emails. This test case tests the retrieval of comments by a user and validation that an email address exists and is in the proper format. Also included are cases with incorrectly formatted and non-existent emails.
 
 ## How to execute
 
