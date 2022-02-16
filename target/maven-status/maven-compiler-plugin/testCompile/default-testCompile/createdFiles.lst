@@ -1,0 +1,5 @@
+stepDefinitions\FetchCommentsAndEmailValidationSteps.class
+stepDefinitions\SearchUserSteps.class
+myTestRunners\MyTestRunner.class
+stepDefinitions\SearchPostsSteps.class
+stepDefinitions\CommonData.class

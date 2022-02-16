@@ -6,7 +6,6 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-//@RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
 		features = {"src/test/resources/features/SearchPosts.feature"},
 		glue = {"stepDefinitions"},
