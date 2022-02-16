@@ -7,8 +7,6 @@ This repository contains the code for Mobiquity code assignment for the Senior Q
 Tools utilised:
 * Java as programming language
 * [Serenity BDD](https://github.com/serenity-bdd/serenity-core) as main library, that includes:
-  * Rest-assured wrapper
-  * Screenplay implementation
   * Cucumber integration
   * Test Reporting
 * Cucumber tool used for Behaviour Driven Development
