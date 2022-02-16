@@ -15,8 +15,8 @@ public class SearchUserSteps {
 		this.commonData = commonData;
 	}
 	
-	@Given("a user with {string} {string} exists")
-	public void a_user_with_exists(String key, String value) {
+	@Given("a user with {string} {string}")
+	public void a_user_with(String key, String value) {
 		commonData.request = given().params(key, value);
 	}
 

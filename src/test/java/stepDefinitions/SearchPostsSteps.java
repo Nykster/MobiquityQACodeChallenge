@@ -20,10 +20,10 @@ public class SearchPostsSteps {
 		commonData.request = given().queryParam("userId", "9");
 	}
 
-	@When("an end user retrieves the posts by {string}")
-	public void an_end_user_retrieves_the_posts_by(String string) {
+	@When("an end user retrieves the posts")
+	public void an_end_user_retrieves_the_posts() {
 		commonData.response = commonData.request.when().get(commonData.baseURI + "posts");
-//		System.out.println("response: " + commonData.response.prettyPrint());
+		System.out.println("response: " + commonData.response.prettyPrint());
 	}
 
 	/*
