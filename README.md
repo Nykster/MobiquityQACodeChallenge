@@ -27,7 +27,7 @@ Requirements to run test:
 (i) Terminal: execute command `mvn clean verify` (after navigating to project on terminal).
 (ii) Eclipse IDE: run MyTestRunner.java as a JUnit test.
 
-## CI
+## CI/CD
 
 When a commit occurs, code is pushed to master branch and subsequently tests are run against CircleCI.
 
