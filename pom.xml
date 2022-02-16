@@ -60,7 +60,12 @@
 			<version>7.2.3</version>
 			<scope>test</scope>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>ru.yandex.qatools.allure</groupId>
+			<artifactId>allure-cucumber-jvm-adaptor</artifactId>
+			<version>1.6.4</version>
+		</dependency>
 
 	</dependencies>
 
