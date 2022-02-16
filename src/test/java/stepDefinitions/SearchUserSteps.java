@@ -11,6 +11,7 @@ public class SearchUserSteps {
 	
 	private CommonData commonData;
 	
+	//dependency injection
 	public SearchUserSteps(CommonData commonData) {
 		this.commonData = commonData;
 	}
@@ -29,14 +30,11 @@ public class SearchUserSteps {
 	@Then("the status code is {int}")
 	public void the_status_code_is(int statusCode) {
 		commonData.json = commonData.response.then().statusCode(statusCode).log().ifValidationFails();
-	//	System.out.println("*****************RESPONSE CODE*****************:" + commonData.response.statusCode());
-	}
+		}
 	
 	@Then("an empty list is returned")
 	public void an_empty_list_is_returned() {
 		commonData.json = commonData.response.then().log().body();
 		System.out.println(commonData.json);
 	}
-
-	
 }

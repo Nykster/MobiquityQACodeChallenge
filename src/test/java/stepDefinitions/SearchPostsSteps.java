@@ -10,7 +10,8 @@ import io.cucumber.java.en.When;
 public class SearchPostsSteps {
 
 	private CommonData commonData;
-
+	
+	//dependency injection
 	public SearchPostsSteps(CommonData commonData) {
 		this.commonData = commonData;
 	}
@@ -25,10 +26,4 @@ public class SearchPostsSteps {
 		commonData.response = commonData.request.when().get(commonData.baseURI + "posts");
 		System.out.println("response: " + commonData.response.prettyPrint());
 	}
-
-	/*
-	 * @Then("the posts are successfully returned status code {int}") public void
-	 * the_posts_are_successfully_returned_status_code(Integer statusCode) {
-	 * commonData.json = commonData.response.then().statusCode(statusCode); }
-	 */
 }

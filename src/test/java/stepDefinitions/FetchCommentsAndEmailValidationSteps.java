@@ -6,15 +6,19 @@ import static org.hamcrest.Matchers.hasItem;
 
 import java.util.List;
 
+import org.hamcrest.Matchers;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.RestAssured;
 
 public class FetchCommentsAndEmailValidationSteps {
 
 	private CommonData commonData;
-
+	
+	//dependency injection
 	public FetchCommentsAndEmailValidationSteps(CommonData commonData) {
 		this.commonData = commonData;
 	}
@@ -33,5 +37,4 @@ public class FetchCommentsAndEmailValidationSteps {
 	public void an_end_user_validates_the_address_is_correct(String emailadd) {
 		commonData.response.then().assertThat().body("email", hasItem(emailadd));
 	}
-
 }

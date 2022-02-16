@@ -8,7 +8,6 @@ Tools:
 * Cucumber6:
   * Supports Behaviour Driven Development
   * Web Based Test Reports which can be uploaded on GitHub (see Test Reports section below)
-* Cucumber tool used for Behaviour Driven Development
 * Hamcrest framework for customized assertion matchers
 * RESTAssured library for writing simple yet powerful tests
 
@@ -17,7 +16,7 @@ Tools:
 The following tests were covered:
 1. Search for user with username "Delphine": This scenario covered searching for the user using different parameters (e.g. id, name, company name); also included are negative tests cases for non-existent data (empty list returned).
 2. Search for posts: This test case covers retrieving posts a user has made using values such as userId, title posts and id. Including is negative testing for non-existent userId, title and id.
-3. Comments search: TThis test case tests the retrieval of comments by a user and validation that an email address exists and is in the proper format. Also included are cases with incorrectly formatted and non-existent emails.
+3. Comments search: TThis test case tests the retrieval of comments by a user and validation that an email address exists and is in the proper format. Also included are cases with incorrectly formatted/non-existent emails (which fail, testing that system works).
 
 ## How to execute
 
