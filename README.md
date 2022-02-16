@@ -16,7 +16,7 @@ Tools:
 The following tests were covered:
 1. Search for user with username "Delphine": This scenario covered searching for the user using different parameters (e.g. id, name, company name); also included are negative tests cases for non-existent data (empty list returned).
 2. Search for posts: This test case covers retrieving posts a user has made using values such as userId, title posts and id. Including is negative testing for non-existent userId, title and id.
-3. Comments search: TThis test case tests the retrieval of comments by a user and validation that an email address exists and is in the proper format. Also included are cases with incorrectly formatted/non-existent emails (which fail, testing that system works).
+3. Comments search: This test case tests the retrieval of comments by a user and validation that an email address exists and is in the proper format. Also included are cases with incorrectly formatted/non-existent emails (which fail, testing that system works).
 
 ## How to execute
 
@@ -38,10 +38,10 @@ Following the execution of a test, an HTML Cucumber report (cucumber-report) is 
 
 Test results are deployed to Collection: [Test Reports](https://reports.cucumber.io/report-collections/a7f2e211-29d4-48cf-8951-2450aeb76b15)
 
-To add new reports add following environmental variable to chosen IDE (Eclipse for this project):
+To add reports to Collection, add following environmental variable to chosen IDE (Eclipse for this project):
 
 Run->Run Configuration->click Environment tab then add following and apply:
 
 CUCUMBER_PUBLISH_TOKEN: 057f9549-243f-474f-ac90-2c272f3e09cf
 
-Reports will now be available in above collection
+Reports will now be accessible in above collection.
